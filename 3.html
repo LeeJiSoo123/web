@@ -11,12 +11,32 @@
       text-decoration: none;
     }
 
-    h1 {
+    h1
+      {
         font-size:50px;
         text-align:center;
-        border:5px solid blue;
-        padding:25px;
-        margin:40px;
+        border-bottom:1px solid blue;
+        margin:0;
+      }
+      ul{
+        border-right:1px solid blue;
+        margin:0;
+        width:140px;
+      }
+
+      body{
+        margin:0;
+      }
+
+      #grid{
+           display:grid;
+           grid-template-columns: 150px 1fr;
+      }
+      #grid ul{
+        padding-top:22px;
+      }
+      #article{
+        padding-left: 49px;
       }
 
   </style>
@@ -26,17 +46,20 @@
 
 <body>
   <h1><a href="index.html">WEB</a></h1>
+  <div id="grid">
   <ul>
     <li><a href="1.html">시은이의 출생</a></li>
     <li><a href="2.html">시은이의 민증</a></li>
     <li><a href="3.html" style="color:red; text-decoration:none">시은이의 <font color="red">롤 티어</font></a></li>
     <li><a href="4.html">시은이의 비디오</a></li>
   </ul>
-
-  <h2>Iron 4</h2>
-  그녀는 레벨이 439이지만 아이언4의 실력을 가지고있다.
-  <p>
-    <img src="시이언맨.jpg" width="50%">
-  </p>
-  증거 사진. [저용량 압축이라 깨져 보일수있음.]
+  <div id="article">
+    <h2>Iron 4</h2>
+    그녀는 레벨이 439이지만 아이언4의 실력을 가지고있다.
+    <p>
+      <img src="시이언맨.jpg" width="50%">
+    </p>
+    증거 사진. [저용량 압축이라 깨져 보일수있음.]
+  </div>
+</div>
 </body>
