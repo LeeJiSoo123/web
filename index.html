@@ -17,21 +17,23 @@
 </head>
 
 <body>
-  <p>
 
+  <p>
+    <input class="weather" type="button" value="야간" onclick="
+    if(document.querySelector('.weather').value === '야간'){
+      document.querySelector('body').style.backgroundColor = 'black';
+      document.querySelector('body').style.color = 'white';
+      document.querySelector('.weather').value ='주간';
+  } else {
+      document.querySelector('body').style.backgroundColor='white';
+      document.querySelector('body').style.color='black';
+      document.querySelector('.weather').value ='야간';
+  }
+  ">
+    <input type="button" value="눌러봐!" onclick="alert('오시은바보')">
   </p>
 
   <h1><a href="index.html" style="color:red; text-decoration:none">WEB</a></h1>
-  <input type="button" value="night" onclick="
-  document.querySelector('body').style.backgroundColor='black';
-  document.querySelector('body').style.color='white';
-  ">
-  <input type="button" value="day" onclick="
-  document.querySelector('body').style.backgroundColor='white';
-  document.querySelector('body').style.color='black';
-  ">
-
-  <input type="button" value="눌러봐!" onclick="alert('오시은바보')">
 
   <div id="grid">
   <ul>
