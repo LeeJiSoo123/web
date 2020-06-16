@@ -12,23 +12,51 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-168761338-1');
+
+function LinksSetColor(color){
+  var alist = document.querySelectorAll('a');
+  var i = 0;
+  while(i < alist.length){
+    alist[i].style.color = color;
+    i = i + 1;
+  }
+}
+
+function BodySetColor(color){
+  document.querySelector('body').style.color = color;
+}
+
+function BodyBackgroundColor(color){
+  document.querySelector('body').style.backgroundColor = color;
+}
+
+function nightDayHandler(self){
+  var target=document.querySelector('body');
+  if(self.value === '야간'){
+    BodyBackgroundColor('black');
+    BodySetColor('white');
+    self.value ='주간';
+
+    LinksSetColor('powderblue');
+
+  } else {
+    BodyBackgroundColor('white');
+    BodySetColor('black');
+    self.value ='야간';
+
+    LinksSetColor('blue');
+  }
+}
 </script>
+
 <link rel="stylesheet" href="style2.css">
 </head>
 
 <body>
 
   <p>
-    <input class="weather" type="button" value="야간" onclick="
-    if(document.querySelector('.weather').value === '야간'){
-      document.querySelector('body').style.backgroundColor = 'black';
-      document.querySelector('body').style.color = 'white';
-      document.querySelector('.weather').value ='주간';
-  } else {
-      document.querySelector('body').style.backgroundColor='white';
-      document.querySelector('body').style.color='black';
-      document.querySelector('.weather').value ='야간';
-  }
+    <input type="button" value="야간" onclick="
+    nightDayHandler(this)
   ">
     <input type="button" value="눌러봐!" onclick="alert('오시은바보')">
   </p>
